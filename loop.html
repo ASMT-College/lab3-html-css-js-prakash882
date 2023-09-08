@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>For</h1>
+    <div id="for"></div>
+    <h1>do while</h1>
+    <div id="dowhile"></div>
+    <h1>while</h1>
+    <div id="while"></div>
+    <script>
+      function homeworkprinting() {
+        let i = 0;
+        let taging = "";
+        for (i = 0; i < 1000; i++) {
+          taging = taging + "I am learning javascript. ";
+        }
+        document.getElementById("for").innerHTML = taging;
+      }
+      function dowhileloop() {
+        let taggin = "";
+        let i = 0;
+        do {
+          taging = taging + "I am learning javascript. ";
+          i = i + 1;
+        } while (i < 1000);
+        document.getElementById("dowhile").innerHTML = taging;
+      }
+      function whileloop() {
+        let taggin = "";
+        let n = 0;
+        while (n < 1000) {
+          taging = taging + "I am learning javascript. ";
+          n = n + 1;
+        }
+        document.getElementById("while").innerHTML = taging;
+      }
+
+      homeworkprinting();
+      dowhileloop();
+      whileloop();
+    </script>
+  </body>
+</html>
