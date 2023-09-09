@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alertbox()">alert</button>
+    <button onclick="confirmbox()">confirm</button>
+    <button ondblclick="promptbox()">promptbox</button>
+    <script>
+        function alertbox(){
+            alert("hello its alert");
+        }
+        function confirmbox() {
+            var result = confirm("do you want to delete");
+            if (result == true){
+                document.write("deleted");
+            }
+        }
+        function promptbox(){
+            var name = prompt("hello its prompt");
+            document.write("welcome " + name );
+        }
+    </script>
+</body>
+</html>
