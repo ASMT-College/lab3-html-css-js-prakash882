@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="dynamic"></div>
+    <div onclick="hideTable()">Hide</div>
+    <div onclick="showTable()">show</div>
+    <div onmouseover="changeTableColor()">change color</div>
+    <div onclick="resetTableColor()">reset color</div>
+
+    <script>
+      var myDiv = document.getElementById("dynamic");
+      var myTable = document.createElement("table");
+      var myHeadingRow = document.createElement("tr");
+      var myHeadingcolumn1 = document.createElement("td");
+      var myHeadingcolumn2 = document.createElement("td");
+      myHeadingcolumn1.innerHTML = "Name";
+      myHeadingcolumn2.innerHTML = "Age";
+      myHeadingRow.appendChild(myHeadingcolumn1);
+      myHeadingRow.appendChild(myHeadingcolumn2);
+
+      myTable.appendChild(myHeadingRow);
+      myDiv.appendChild(myTable);
+
+      function sayHi() {
+        alert("hi");
+      }
+
+      function sayAge() {
+        alert("hi");
+      }
+
+      myHeadingcolumn1.addEventListener("click", sayHi);
+      myHeadingcolumn2.setAttribute("ondblclick", "sayAge()");
+      function hideTable() {
+        var myDiv = document.getElementById("dynamic");
+        myDiv.style.display = "none";
+      }
+      function showTable() {
+        var myDiv = document.getElementById("dynamic");
+        myDiv.style.display = "block";
+      }
+
+      function changeTableColor() {
+        var myDiv = document.getElementById("dynamic");
+        myDiv.style.backgroundColor = "red";
+      }
+
+      function resetTableColor() {
+        var myDiv = document.getElementById("dynamic");
+        myDiv.style.backgroundColor = "blue";
+      }
+
+      //   create dynamic table when table data is provided as below name:name age email using dom
+      //   form object method and properties and events
+    </script>
+  </body>
+</html>
