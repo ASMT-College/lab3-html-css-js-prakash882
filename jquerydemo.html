@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        // $("#myDiv").hide();
+        $("#myDiv").on("click", function () {
+          alert("now its also me naresh haha");
+        });
+        $("#myDiv").on("mouseenter", function () {
+          $("body").css("background-color", "red");
+        });
+        $("#myDiv").on("mouseleave", function () {
+          $("body").css("background-color", "yellow");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="myDiv">My name is naresh</div>
+    <div onclick="$('#myDiv').show()">Show</div>
+    <div onclick="hiding()">Hide</div>
+    <script>
+      function hiding() {
+        $("#myDiv").hide();
+      }
+    </script>
+  </body>
+</html>
